@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { PublicGatewayCollection } from "../shared/constants/collections/public.gateway.collection";
 import { IGateway } from "../shared/interfaces/gateway.interface";
+import { MedicationGateway } from "./medication/medication.gateway";
 import { UserGateway } from "./user/user.gateway";
 
 export class PublicGateway implements IGateway {
@@ -11,6 +12,7 @@ export class PublicGateway implements IGateway {
     }
 
     public subscribe(): Router {
+        this._router.use(PublicGatewayCollection.MEDICATIONS, new MedicationGateway().subscribe());
         this._router.use(PublicGatewayCollection.USERS, new UserGateway().subscribe());
 
         return this._router;
