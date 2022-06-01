@@ -1,0 +1,52 @@
+{
+  "name": "blockchain-medication",
+  "version": "1.0.0",
+  "description": "Blockchain Medication. REST API with Clean Code and Clean Architecture.",
+  "main": "main.js",
+  "scripts": {
+    "start:dev": "nodemon src/main.ts"
+  },
+  "keywords": [
+    "REST",
+    "API.",
+    "BLOCKCHAIN.",
+    "CLEAN",
+    "CODE/ARCHICTURE.",
+    "SOFTWARE",
+    "ENGINEERING"
+  ],
+  "author": "Diogo Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^10.0.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.6",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/chai": "^4.3.1",
+    "@types/chai-http": "^4.2.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/express-validator": "^3.0.0",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.36",
+    "@types/uuid": "^8.3.4",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.0"
+  }
+}
