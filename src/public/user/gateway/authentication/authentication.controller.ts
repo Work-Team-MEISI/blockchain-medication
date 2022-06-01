@@ -51,7 +51,7 @@ export class AuthenticationController {
             throw { status: CodeCollection.SERVER_ERROR, message: error };
         })
 
-        return _res.status(CodeCollection.CREATED).json(new CreateResponseModel<{ user: UserEntity, tokens: TokenModel }>(
+        return _res.status(CodeCollection.UPDATED).json(new CreateResponseModel<{ user: UserEntity, tokens: TokenModel }>(
             user.userId,
             { user: user, tokens: tokenModel },
             null,
@@ -116,7 +116,7 @@ export class AuthenticationController {
             throw { status: CodeCollection.SERVER_ERROR, message: error };
         })
 
-        return _res.status(CodeCollection.OK).json();
+        return _res.status(CodeCollection.UPDATED).json();
     }
 
     public async forgotPassword(_req: Request, _res: Response): Promise<Response> {
@@ -141,7 +141,7 @@ export class AuthenticationController {
             throw { status: CodeCollection.SERVER_ERROR, message: error };
         })
 
-        return _res.status(CodeCollection.CREATED).json(new UpdateResponseModel<TokenModel>(
+        return _res.status(CodeCollection.UPDATED).json(new UpdateResponseModel<TokenModel>(
             userId,
             tokenModel,
             null,
